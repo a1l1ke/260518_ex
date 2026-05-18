@@ -4,6 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 선택자</title>
+    <style>
+      /* 태그 선택자 */
+      /* 태그명 {프로퍼티명: 프로퍼티값;} */
+      p {
+        color: gray;
+        /* 1 */
+      }
+      /* 클래스 선택자 */
+      /* .클래스명 {프로퍼티명: 프로퍼티값;} */
+      .class-style {
+        color: green;
+        /* 10 */
+      }
+      /* 클래스는 같은 태그에 2개 이상 부여 가능 */
+      .class-style2 {
+        color: red;
+      }
+      /* id 선택자 */
+      /* #id명 {프로퍼티명: 프로퍼티값;} */
+      #id-style {
+        color: yellow;
+        /* 100 */
+      }
+      .class-style3 {
+        color: blue;
+      }
+      .important {
+        color: pink !important;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <p>태그 선택자</p>
+    <!-- emmet -->
+    <!-- p.class-style -->
+    <!-- 케밥스타일 -> kebab-style -->
+    <p class="class-style important">클래스 선택자</p>
+    <p class="class-style class-style2 class-style3">클래스 선택자</p>
+    <p id="id-style" class="class-style3">id 선택자</p>
+    <p style="color: brown" id="id-style" class="class-style3 important">
+      style 속성
+    </p>
+  </body>
 </html>
