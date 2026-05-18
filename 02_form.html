@@ -14,12 +14,51 @@
     <input />
     <button>제출</button>
     <h2>폼 인풋</h2>
-    <form>
+    <!-- form? -->
+    <!-- 주소창에 데이터를 전달하는 방식 : get -->
+    <!-- <form action="" method="get"> -->
+    <form action="https://search.naver.com/search.naver" method="get">
+      <!-- 나 자신 페이지로 감 -->
       <!-- form으로 묶으면 하위 Input에서 enter치면 제출 처리 (혹은 버튼 누르면) -->
       <!-- input에 name 안 붙여주면 주소창을 통해 전달 X -->
       <input /><br />
-      <input name="username" />
-      <button>제출</button>
+      <!-- <input name="username" /> -->
+      <!-- 유저이름 : <input name="username" /><br />
+      비밀번호 : <input name="password" /> -->
+      <!-- for는 name이 아니라 id -->
+      <label for="username">유저이름 : </label
+      ><input name="username" type="text" id="username" /><br />
+      <label>유저이름 : <input name="username" /><br /></label><br />
+      <label for="password">비밀번호 : </label
+      ><input
+        name="password"
+        id="password"
+        type="password"
+        placeholder="암호를 입력해주세요"
+      />
+      <p>암호를 입력해주세요</p>
+      <hr />
+      <!-- 큰 text input 여러줄 -->
+      <textarea name="long_text"> </textarea>
+      <input type="radio" name="gender" /> 남성
+      <input type="radio" name="gender" /> 여성
+      <select name="city">
+        <option>서울</option>
+        <option>부산</option>
+        <option>대전</option>
+      </select>
+      <input type="checkbox" name="hobby" value="1" /> 취미1
+      <input type="checkbox" name="hobby" value="2" /> 취미2
+      <!-- html5 -->
+      <input type="color" />
+      <input type="date" />
+      <br />
+      <!-- 둘이 실질적으로 같음 -->
+      <input type="button" value="버튼" />
+      <!-- <button>제출</button> -->
+      <button type="submit">제출</button>
+      <!-- submit -> form -->
+      <button type="button">폼 제출용 버튼이 아님</button>
     </form>
   </body>
 </html>
